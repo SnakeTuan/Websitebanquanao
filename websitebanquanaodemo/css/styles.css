@@ -1,0 +1,795 @@
+/* -------------------- Tinh chỉnh chung -------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12 25px;
+    height: 70px;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.3);
+}
+header:hover {
+    background-color: #fff;
+}
+header.change {
+    background-color: #fff;
+}
+/* -------------------- Thanh trên cùng -------------------- */
+.logo {
+    display: flex;
+}
+.logo img {
+    height: 60px;
+}
+.menu {
+
+    display: flex;
+}
+.menu li {
+    padding: 0 12px;
+    position: relative;
+}
+.menu li:hover .mini_menu {
+    visibility: visible;
+    top: 20px;
+} 
+.mini_menu {
+    position: absolute;
+    width: 150px;
+    border: 1px solid #ccc;
+    padding: 10px 0 10px 20px;
+    visibility: hidden;
+    top: 40px;
+    transition: 0.3s;
+    z-index: 1;
+    background-color: #fff;
+}
+.mini_menu li ul a{
+    font-weight: normal;
+    font-size: 12px;
+}
+.menu li a {
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    line-height: 20px;
+}
+.other {
+    width: 40%;
+    display: flex;
+}
+.other li {
+    padding: 0 12px;
+}
+
+.other input {
+    text-align: left;
+    align-items: left;
+    justify-content: left;
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
+    background-color: transparent;
+}
+
+.other button {
+    width: 40px;
+    height: 30px;
+}
+.other li:nth-child(3) a {
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    
+}
+.other li:last-child a {
+    
+    margin-top: 10px;
+    width: 40px;
+    height: 30px;
+    margin-right: 50px;
+}
+/* -------------------- Slide ảnh ở giữa -------------------- */
+#slider {
+    padding-bottom: 30px;
+    border-bottom: 2px solid #000;
+    overflow: hidden;
+}
+.aspect-ratio-169 {
+    display: block;
+    position: relative;
+    padding-top: 56.25%;
+    transition: 0.5s;
+}
+.aspect-ratio-169 img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.dots {
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dot {
+    height: 12px;
+    width: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.dot.activate {
+    background-color: #333;
+}
+/* -------------------- Thông tin ở cuối -------------------- */
+.apps {
+    text-align: center;
+    align-items: center;
+    padding: 100px;
+}
+.apps p {
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #000;
+}
+.showApps {
+    margin: 50px;
+}
+.showApps img {
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+.apps input {
+    margin-top: 50px;
+    border: none;
+    border-bottom: solid #333;
+    padding-bottom: 15px;
+    width: 235px;
+    text-align: center;
+    outline: none;
+}
+.footer-top {
+    margin-bottom: 20px;
+    height: 70px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.footer-top img {
+    height: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.footer-top li {
+    padding: 0 12px;
+    position: relative;
+}
+.footer-top li::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 80%;
+    background: #ccc;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.footer-top li:last-child::after {
+    display: none;
+}
+.footer-top li:last-child a {
+    margin-right: 12px;
+    color: #333;
+}
+.footer-center {
+    text-align: center;
+}
+.footer-bottom {
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* -------------------- Cartegory -------------------- */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.cartegory {
+    padding: 100px 0 0;   
+}
+.cartegory-top {
+    margin-bottom: 50px;
+}
+.cartegory-top p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 12px;
+    font-size: 12px;
+}
+.cartegory-left {
+    width: 20%;
+}
+.cartegory-left ul li {
+    padding: 12px 0;
+}
+.cartegory-left ul li>a {
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.cartegory-left ul li ul li {
+    padding-left: 20px;
+}
+.cartegory-left ul li ul li a {
+    color: #333;
+    font-size: 12px;
+}
+.left-list ul {
+    display: none;
+}
+.left-list.block ul {
+    display: block;
+}
+.cartegory-right {
+    width: 80%;
+}
+.right-list:first-child {
+    flex: 2;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.right-list {
+    flex: 1;
+    padding: 0 12px;
+}
+.right-list button {
+    width: 100%;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+.right-list select {
+    width: 100%;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+.cartegory-content {
+    margin-top: 20px;
+}
+.content-item {
+    width: calc(25% - 12px);
+    text-align: center;
+    padding: 12px 0;
+}
+.content-item h1 {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 6px;
+    color: #333;
+}
+.content-item img {
+    width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.content-bottom {
+    justify-content: space-between;
+    margin: 30px 0 20px;
+}
+.content-bottom p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+/* -------------------- Product -------------------- */
+.product {
+    padding: 100px 0;
+}
+.product-top {
+    margin-bottom: 30px;
+}
+.product-top p {
+    font-size: 12px;
+    margin: 0 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.content-left {
+    width: 50%;
+    padding-right: 50px;
+}
+.content-right {
+    width: 50%;
+}
+.big-img {
+    width: 80%;
+    text-align: center;
+}
+.big-img img {
+    width: 80%;
+}
+.small-img {
+    width: 20%;
+    text-align: center;
+}
+.small-img img {
+    width: 100%;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+.product-name h1 {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.product-name p {
+    color: #ccc;
+    font-size: 12px;
+}
+.product-price {
+    margin: 12px 0;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.product-color span {
+    font-size: 30px;
+}
+.size span {
+    display: inline-block;
+    padding: 4px 8px;
+    border: 1px solid #ddd;
+    margin: 0px 12px 20px 0;
+    font-size: 12px;
+    cursor: pointer;
+}
+.product-quantity input {
+    width: 50px;
+    padding-left: 10px;
+}
+.product-button button {
+    width: 220px;
+    height: 40px;
+    display: block;
+    margin: 20px 0 12px;
+    transition: all 0.3s;
+}
+.product-button button:first-child {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #333;
+    cursor: pointer;
+}
+.product-button button:first-child:hover {
+    background-color: #000;
+    color: #fff;
+}
+.product-button button:last-child {
+    border: 2px solid yellowgreen;
+    cursor: pointer;
+    background-color: #fff;
+}
+.product-button button:last-child:hover {
+    background-color: yellowgreen;
+}
+.product-discription {
+    position: relative;
+    padding-top: 40px;
+    margin-top: 40px;
+    border-top: 2px solid #ddd;
+}
+.discription-top {
+    position: absolute;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ddd;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+.slide-down {
+    display: none;
+}
+.mid-tittle {
+    border-bottom: 2px solid #ddd;
+}
+.tittle {
+    padding: 6px;
+    margin-right: 6px;
+    cursor: pointer;
+}
+.mid-content {
+    padding-top: 28px;
+}
+.mid-content div {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+.mid-content-chitiet {
+    display: none;
+}
+.mid-content-baoquan {
+    display: none;
+}
+
+/* -------------------- Cart -------------------- */
+.cart {
+    padding: 100px 0;
+}
+.set-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart-top {
+    height: 2px;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0px 100px 0px;
+    background-color: #ddd;
+    display: flex;
+}
+.icon-border {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    background-color: #fff;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.icon-border i {
+    color: #ddd;
+}
+.cart-top-cart {
+    border: 2px solid greenyellow;
+}
+.cart-top-cart i {
+    color: greenyellow;
+}
+.cart-content-left {
+    flex: 2;
+    padding-right: 16px;
+}
+.cart-content-left table {
+    width: 100%;
+    text-align: center;
+}
+.cart-content-left table th {
+    padding-bottom: 20px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    border-collapse: collapse;
+    border-bottom: 2px solid #ddd;
+}
+.cart-content-left table p {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+.cart-content-left table input {
+    width: 50px;
+}
+.cart-content-left table span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+.cart-content-left table td {
+    padding: 20px 0;
+    border-bottom: 2px solid #ddd;
+}
+.cart-content-left table td:first-child img {
+    width: 100px;
+}
+.cart-content-left table td:nth-child(2) {
+    max-width: 130px;
+}
+.cart-content-left table td:nth-child(3) {
+    width: 12px;
+}
+.cart-content-right {
+    flex: 1;
+    padding-left: 12px;
+    border-left: 2px solid #ddd;
+}
+.cart-content-right table {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.cart-content-right table th {
+    padding-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #333;
+    border-collapse: collapse;
+}
+.cart-content-right table td {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    padding: 6px 0;
+}
+.cart-content-right tr:nth-child(2) td {
+    border-top: 2px solid #ddd;
+}
+.cart-content-right tr:nth-child(4) td {
+    border-bottom: 2px solid #ddd;
+}
+.cart-right-button {
+    margin-top: 20px;
+    text-align: center;
+    align-items: center;
+}
+.cart-right-button button {
+    padding: 0 18px;
+    height: 35px;
+    margin-right: 20px;
+    transition: all 0.3s;
+}
+.cart-right-button button:first-child {
+    background-color: #fff;
+    border: 2px solid #333;
+    cursor: pointer;
+}
+.cart-right-button button:first-child:hover {
+    background-color: #000;
+    color: #fff;
+}
+.cart-right-button button:last-child {
+    border: 2px solid yellowgreen;
+    cursor: pointer;
+    background-color: #fff;
+}
+.cart-right-button button:last-child:hover {
+    background-color: yellowgreen;
+}
+
+/* -------------------- Delivery -------------------- */
+.delivery-top-shipping {
+    border: 2px solid greenyellow;
+}
+.delivery-top-shipping i {
+    color: greenyellow
+}
+.delivery {
+    margin-top: -100px;
+}
+.delivery-content {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.delivery-left {
+    width: 40%;
+    padding-right: 12px;
+    display: block;
+}
+.delivery-left p {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 8px;
+}
+.delivery-dangnhap {
+    margin-top: 12px;
+    cursor: pointer;
+}
+.delivery-khachle {
+    margin-bottom: 12px 0;
+}
+.delivery-khachle input {
+    margin-right: 12px;
+}
+.delivery-dangky {
+    margin-bottom: 20px;
+}
+.delivery-dangky input {
+    margin-right: 12px;
+}
+.delivery-input {
+    justify-content: space-between;
+}
+.delivery-input-item {
+    width: calc(50% - 12px);
+}
+.delivery-input-item input {
+    width: 100%;
+    height: 35px;
+    border: 1px solid #ddd;
+    padding-left: 8px;
+}
+.delivery-long-input input {
+    width: 100%;
+    height: 35px;
+    border: 1px solid #ddd;
+    padding-left: 8px;
+}
+.delivery-bottom {
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.delivery-bottom a {
+    display: inline-block;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: coral;
+    transition: all 0.3s;
+}
+.delivery-bottom a:hover {
+    color: chocolate;
+}
+.delivery-bottom button {
+    height: 35px;
+    border: 2px solid greenyellow;
+    padding: 8px 14px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: all 0.3s;
+}
+.delivery-bottom button:hover {
+    background-color: greenyellow;
+    color: #fff;
+}
+.delivery-right {
+    width: 40%;
+    border-left: 2px solid #ddd;
+}
+.delivery-right table {
+    width: 100%;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.delivery-right table tr {
+    text-align: left;
+}
+.delivery-right table tr th {
+    padding-bottom: 12px;
+    border-bottom: 2px solid #ddd;
+}
+.delivery-right table tr th:last-child {
+    text-align: right;
+}
+.delivery-right table tr td {
+    padding: 6px 0;
+}
+.delivery-right table tr:nth-child(4) {
+    border-top: 2px solid #ddd;
+}
+.delivery-right table tr td:last-child {
+    text-align:  right;
+}
+.delivery-right table tr td:first-child {
+    text-align: left;
+}
+
+/* -------------------- Payment -------------------- */
+.payment-top-money {
+    border: 2px solid greenyellow;
+}
+.payment-top-money i {
+    color: greenyellow
+}
+.payment {
+    margin-top: -100px;
+}
+.payment-content {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.payment-content-left {
+    width: 40%;
+    padding-right: 12px;
+    display: block;
+}
+.payment-content-right {
+    width: 40%;
+    border-left: 2px solid #ddd;
+}
+.payment-bottom {
+    justify-content: right;
+    text-align: right;
+    padding-top: 20px;
+}
+.payment-bottom button {
+    height: 35px;
+    border: 2px solid greenyellow;
+    padding: 8px 14px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: all 0.3s;
+}
+.payment-bottom button:hover {
+    background-color: greenyellow;
+}
+.payment-content-left p {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 8px;
+}
+.payment-content-left input {
+    margin-right: 12px;
+}
+.payment-method {
+    margin-top: 12px;
+}
+
+/* -------------------- Success -------------------- */
+.success {
+    padding-top: 100px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.success-img img {
+    height: 100px;
+    width: 100px;
+}
+.success p {
+    font-weight: bold;
+    margin: 20px 0;
+}
+.success-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.success-left {
+    width: 20%;
+}
+.success-right {
+    width: 20%;
+}

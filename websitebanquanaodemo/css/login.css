@@ -1,0 +1,142 @@
+:root{
+    --bg1: #9b59b6;
+    --bg2: #3498db;
+    --text: #26ade4;
+}
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to top left, var(--bg1), var(--bg2));
+}
+.login-form {
+    width: 300px;
+    height: 500px;
+    padding: 40px 30px;
+    border-radius: 20px;
+    background: #fff;
+}
+.login-form h1 {
+    margin-bottom: 40px;
+}
+.login-form button {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 40px;
+    border: none;
+    border-radius: 50px;
+    background-size: 200%;
+    color: #fff;
+    background: linear-gradient(120deg, var(--bg1), var(--bg2));
+    cursor: pointer;
+    transition: 0.5s;
+}
+.login-form button:hover {
+    background-position: right;
+}
+.form-text {
+    margin-bottom: 40px;
+    position: relative;
+}
+.form-text input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid #ddd;
+}
+/* ------------------------------------------------------------ */
+/* .register {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to top left, var(--bg1), var(--bg2));
+}
+.second-container {
+    position: relative;
+    width: 360px;
+    height: 580px;
+    border-radius: 20px;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+.second-container div {
+    position: absolute;
+    top: 100px;
+    width: 280px;
+    margin-left: 40px;
+    margin-right: 40px;
+    transition: 0.5s;
+}
+.second-container div h1{
+    margin-bottom: 40px;
+}
+.second-container input {
+    height: 40px;
+    width: 280px;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    background: transparent;
+}
+.second-container div button{
+    height: 40px;
+    width: 120px;
+    border-radius: 50px;
+    border: none;
+    color:#fff;
+    background: linear-gradient(120deg, var(--bg1), var(--bg2));
+}
+.second-form {
+    left: -600px;
+}
+.third-form {
+    left: 600px;
+}
+.step {
+    display: flex;
+    height: 40px;
+    border-bottom: 2px solid #ccc;
+}
+.step span {
+    display: block;
+    width: 120px;
+    line-height: 40px;
+}
+.line {
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    background: linear-gradient(120deg, var(--bg1), var(--bg2));
+    transition: 0.5s;
+    opacity: 0.8;
+}
+.line::before {
+    content: '';
+    position: absolute;
+    border-bottom: 20px solid transparent;
+    border-top: 20px solid transparent;
+    border-left: 20px solid #3498db;
+    border-right: 20px solid transparent;
+    right: -40px;
+} */
